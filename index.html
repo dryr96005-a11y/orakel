@@ -61,7 +61,7 @@
     .button:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
     .button svg { width: 18px; height: 18px; flex: 0 0 auto; }
     .button-small { min-height: 42px; border-radius: 13px; padding: 8px 16px; font-size: 14px; }
-    .hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, .94fr); align-items: center; gap: clamp(38px, 7vw, 86px); padding-block: clamp(48px, 8vw, 96px) 68px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, .98fr); align-items: center; gap: clamp(30px, 5.5vw, 68px); padding-block: clamp(48px, 7vw, 82px) 68px; }
     .hero-copy { padding-block: 8px; }
     .eyebrow { display: inline-flex; align-items: center; gap: 9px; color: var(--green); font-size: 13px; font-weight: 750; letter-spacing: .02em; }
     .eyebrow::before { width: 24px; height: 1px; content: ""; background: var(--gold); }
@@ -72,9 +72,9 @@
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
     .hero-note { display: flex; align-items: center; gap: 8px; margin-block-start: 16px; color: var(--muted); font-size: 13px; }
     .hero-note svg { width: 17px; height: 17px; color: var(--green); }
-    .photo-wrap { position: relative; min-width: 0; padding: 0 0 22px 22px; }
+    .photo-wrap { position: relative; width: 100%; max-width: 540px; min-width: 0; margin-inline: auto; padding: 0 0 18px 18px; }
     .photo-wrap::before { position: absolute; inset-inline-start: 0; inset-block-end: 0; z-index: -1; width: 72%; height: 42%; border-radius: 0 28px 0 28px; background: var(--gold-soft); content: ""; }
-    .hero-photo { display: block; width: 100%; aspect-ratio: 1.03 / 1; border: 8px solid var(--white); border-radius: var(--radius-xl); object-fit: cover; object-position: 42% center; box-shadow: var(--shadow); }
+    .hero-photo { display: block; width: 100%; aspect-ratio: 1.32 / 1; border: 7px solid var(--white); border-radius: 30px; object-fit: cover; object-position: center; box-shadow: 0 22px 58px rgba(31,53,43,.14); }
     .photo-caption { position: absolute; inset-inline-end: 24px; inset-block-end: 44px; display: flex; align-items: center; gap: 12px; max-width: calc(100% - 54px); border: 1px solid rgba(255,255,255,.7); border-radius: 18px; padding: 12px 16px; background: rgba(255,254,250,.94); box-shadow: 0 12px 30px rgba(20,38,31,.13); backdrop-filter: blur(12px); }
     .caption-icon { display: grid; width: 39px; height: 39px; flex: 0 0 auto; place-items: center; border-radius: 13px; background: var(--green-soft); color: var(--green); }
     .caption-icon svg { width: 20px; height: 20px; }
@@ -104,7 +104,7 @@
     .manager-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-block-start: 25px; }
     .manager { border: 1px solid rgba(23,79,64,.11); border-radius: 17px; padding: 15px 17px; background: rgba(255,254,250,.76); }
     .manager span { display: block; color: var(--muted); font-size: 12px; }
-    .manager strong { display: block; margin-block-start: 3px; color: var(--green-deep); font-size: 18px; }
+    .manager strong { display: block; margin-block-start: 3px; color: var(--green-deep); font-size: 18px; }\n    .manager a { display: inline-block; margin-block-start: 7px; color: var(--green); font-size: 14px; font-weight: 700; direction: ltr; text-decoration: none; }\n    .manager a:hover { text-decoration: underline; }\n    .manager small { display: block; margin-block-start: 5px; color: var(--muted); font-size: 12px; }
     .rules-card { border: 1px solid rgba(23,79,64,.1); border-radius: var(--radius-xl); padding: 12px 27px; background: var(--white); box-shadow: 0 14px 40px rgba(31,53,43,.06); }
     .rule { display: grid; grid-template-columns: 32px 1fr; align-items: start; gap: 12px; padding-block: 17px; }
     .rule + .rule { border-block-start: 1px solid #eeeee7; }
@@ -139,8 +139,8 @@
       .nav-links .button { display: none; }
       .hero { grid-template-columns: 1fr; gap: 30px; padding-block: 42px 45px; }
       .hero-copy { order: 0; }
-      .photo-wrap { order: 1; width: min(100%, 520px); margin-inline: auto; padding-inline-start: 14px; padding-block-end: 14px; }
-      .hero-photo { aspect-ratio: 1.18 / 1; border-width: 6px; border-radius: 25px; }
+      .photo-wrap { order: 1; width: min(100%, 520px); margin-inline: auto; padding-inline-start: 12px; padding-block-end: 12px; }
+      .hero-photo { aspect-ratio: 1.22 / 1; border-width: 6px; border-radius: 25px; }
       .photo-caption { inset-inline-end: 18px; inset-block-end: 29px; }
       .facts { grid-template-columns: 1fr; }
       .fact { justify-content: flex-start; min-height: 72px; padding-inline: 19px; }
@@ -228,7 +228,7 @@
 
     <section class="section rules-section" id="rules" aria-labelledby="rules-title">
       <div class="rules-grid shell">
-        <div class="rules-intro"><div class="eyebrow">חשוב לדעת</div><h2 id="rules-title">מרחב מכבד.<br>כוונה רצינית.</h2><p>הקבוצה מיועדת להיכרות רצינית למטרת נישואין, באווירה שמכבדת את כל המשתתפים.</p><div class="manager-grid"><div class="manager"><span>נשים פונות אל</span><strong>דבורה</strong></div><div class="manager"><span>גברים פונים אל</span><strong>רפאל</strong></div></div><p class="hero-note">אפשר להגיע למנהלים דרך קבוצת הוואטסאפ.</p></div>
+        <div class="rules-intro"><div class="eyebrow">חשוב לדעת</div><h2 id="rules-title">מרחב מכבד.<br>כוונה רצינית.</h2><p>הקבוצה מיועדת להיכרות רצינית למטרת נישואין, באווירה שמכבדת את כל המשתתפים.</p><div class="manager-grid" aria-label="יצירת קשר עם מנהלי הקבוצה"><div class="manager"><span>נשים פונות אל</span><strong>דבורה פרץ</strong><a href="https://wa.me/972586361530" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעת WhatsApp לדבורה פרץ">058-636-1530</a></div><div class="manager"><span>גברים פונים אל</span><strong>רפאל אדרי</strong><a href="https://wa.me/972533431151" target="_blank" rel="noopener noreferrer" aria-label="שליחת הודעת WhatsApp לרפאל אדרי">053-343-1151</a><small>ניתן לפנות בין 12:00 ל־21:00</small></div></div><p class="hero-note">אפשר להגיע למנהלים דרך קבוצת הוואטסאפ.</p></div>
         <div class="rules-card" aria-label="כללי הקבוצה">
           <div class="rule"><span class="rule-index">01</span><p>דתיים, חרדים, מסורתיים וחוזרים בתשובה.</p></div>
           <div class="rule"><span class="rule-index">02</span><p>רווקים ורווקות, גרושים וגרושות, אלמנים ואלמנות.</p></div>
