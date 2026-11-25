@@ -1,3 +1,7 @@
+User-agent: OAI-SearchBot
+Allow: /
+
 User-agent: *
 Allow: /
+
 Sitemap: https://strong-bombolone-3eb6a7.netlify.app/sitemap.xml
